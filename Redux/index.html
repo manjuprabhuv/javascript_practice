@@ -54,9 +54,13 @@
             }
         }
 
+        /*const store = Redux.createStore(Redux.combineReducers({
+            todos:todoReducer,
+            goals:goalReducer
+        })) */
 
        // let store = Redux.createStore(reducer);
-        let store = createStore(reducer);
+        const store = createStore(reducer);
       
 
         // store.dispatch({type:ADD_TODO,todo:{id:1,name:"learn  React",complete:false}});
@@ -132,6 +136,7 @@
             document.getElementById("goals").innerHTML='';
             document.getElementById("todos").innerHTML='';
             const {goals,todos} =store.getState();
+            console.log("todos....",todos);
             goals.forEach(addGoalDOM);
             todos.forEach(addTodoDOM);
         });
