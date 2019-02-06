@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <script src="simpleStore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.7.2/redux.min.js"></script>
     <script>
         const ADD_TODO = 'ADD_TODO'
         const REMOVE_TODO = 'REMOVE_TODO'
@@ -54,7 +55,7 @@
         }
 
 
-
+       // let store = Redux.createStore(reducer);
         let store = createStore(reducer);
       
 
